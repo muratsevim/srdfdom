@@ -4,9 +4,10 @@ project(srdfdom)
 find_package(Boost REQUIRED)
 include_directories(SYSTEM ${Boost_INCLUDE_DIR})
 
-find_package(catkin REQUIRED COMPONENTS console_bridge urdfdom_headers cmake_modules)
+find_package(catkin REQUIRED COMPONENTS urdfdom_headers cmake_modules)
 
 find_package(TinyXML REQUIRED)
+find_package(console_bridge REQUIRED)
 
 include_directories(include ${TinyXML_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
